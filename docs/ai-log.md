@@ -117,5 +117,193 @@ Create Next.js TypeScript project
 ### Commit 2
 Replace starter page with neighborhood platform app shell
 
+# Lab 2 - Reusable Components and Accessibility Review
+
+## Step 2 - TypeScript Interface Review
+
+### Tool
+
+Google AI Studio
+
+### Prompt
+
+Provide TypeScript interfaces only for a PropertyCard component and a SponsorBanner component. Include required and optional fields. Do not generate implementation code.
+
+### Output Used
+
+#### PropertyCard Required Fields
+
+```ts
+id: string
+title: string
+price: number
+imageUrl: string
+address: string | PropertyAddress
+```
+
+#### PropertyCard Optional Fields
+
+```ts
+bedrooms?: number
+bathrooms?: number
+squareFeet?: number
+propertyType?: string
+listingStatus?: string
+amenityHighlights?: string[]
+```
+
+#### SponsorBanner Required Fields
+
+```ts
+id: string
+sponsorName: string
+sponsorLogoUrl: string
+targetUrl: string
+```
+
+#### SponsorBanner Optional Fields
+
+```ts
+headline?: string
+tagline?: string
+description?: string
+callToActionText?: string
+placement?: string
+variant?: string
+```
+
+### Output Rejected
+
+Rejected fields that added complexity beyond the requirements of the lab:
+
+```ts
+onFavoriteToggle
+onShare
+onImpression
+onClose
+campaignId
+additionalImages
+agent
+placement tracking
+telemetry callbacks
+```
+
+Reason:
+The lab only requires reusable components, shared data types, semantic HTML, accessibility review, and responsive layouts. Advanced analytics and event tracking are not required.
+
+### Review of Required vs Optional Fields
+
+#### Required Property Fields
+
+These fields are necessary to display a property card:
+
+```ts
+id
+title
+price
+imageUrl
+address
+```
+
+#### Optional Property Fields
+
+These fields provide additional details but are not required for every property:
+
+```ts
+bedrooms
+bathrooms
+squareFeet
+propertyType
+listingStatus
+amenityHighlights
+```
+
+#### Required Sponsor Fields
+
+These fields are necessary to display a sponsor banner:
+
+```ts
+id
+sponsorName
+sponsorLogoUrl
+targetUrl
+```
+
+#### Optional Sponsor Fields
+
+These fields provide additional marketing content:
+
+```ts
+headline
+tagline
+description
+callToActionText
+variant
+placement
+```
+
+### Verification
+
+Reviewed all generated interfaces before implementation.
+
+Verified:
+- Required fields support component rendering.
+- Optional fields support future expansion.
+- No secrets or sensitive information included.
+- Interfaces can be simplified for the project's current scope.
+
+### Commit
+
+Pending
+
+## Step 4 - PropertyCard Component
+
+### Verification
+
+Reviewed generated markup and confirmed:
+
+- Uses semantic article element.
+- Includes heading.
+- Includes address.
+- Includes price information.
+- Uses facts list for bedrooms and bathrooms.
+- Includes meaningful image alt text.
+- Includes keyboard-accessible link with descriptive label.
+
 ### Commit 3
 Add AI collaboration documentation and verification notes
+
+## Step 5 - SponsorBanner Component
+
+### Verification
+
+Reviewed generated markup and confirmed:
+
+- Sponsored label is visibly displayed.
+- Link identifies the business by name.
+- Component is keyboard accessible.
+- Semantic aside element used for sponsored content.
+
+## Step 6 - SearchFilters Component
+
+### Verification
+
+Reviewed generated form and confirmed:
+
+- Uses semantic form element.
+- Labels are associated using htmlFor and id.
+- Select controls are keyboard accessible.
+- Submit button is keyboard accessible.
+- Does not rely on placeholder text as labels.
+
+## Step 7 - Sample Data and Rendering
+
+### Verification
+
+Implemented:
+
+- Three sample Property objects.
+- Rendering with Array.map().
+- Stable property IDs used for React keys.
+
+Verified that list rendering works correctly without key warnings.

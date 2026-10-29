@@ -39,3 +39,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Deployment URL:
 https://vercel.com/org-13/neighborhood-listing-platform/uZtPvJmeTYYW8CqC2gDtc7ejmPip
+
+## Lab 2 Component Hierarchy
+Page
+├── SearchFilters
+├── SponsorBanner
+└── Listing Grid
+    ├── PropertyCard
+    ├── PropertyCard
+    └── PropertyCard
