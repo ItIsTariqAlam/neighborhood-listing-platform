@@ -1,32 +1,42 @@
-import { Property } from "../types";
-
 interface PropertyCardProps {
-  property: Property;
+  address: string;
+  price: number;
+  bedrooms: number;
+  bathrooms: number;
+  squareFeet: number;
 }
 
 export default function PropertyCard({
-  property,
+  address,
+  price,
+  bedrooms,
+  bathrooms,
+  squareFeet,
 }: PropertyCardProps) {
   return (
     <article className="border rounded-lg p-4 shadow-sm">
-      {property.imageUrl}
-
-      <h2 className="text-xl font-semibold mt-3">
-        {property.title}
-      </h2>
-
-      <p className="text-gray-600">
-        {property.address}
-      </p>
+      <header>
+        <h2 className="text-xl font-semibold">
+          {address}
+        </h2>
+      </header>
 
       <p className="text-lg font-bold mt-2">
-        ${property.price.toLocaleString()}
+        ${price.toLocaleString()}
       </p>
 
       <ul className="mt-3 list-disc list-inside">
-        <li>{property.bedrooms} Bedrooms</li>
-        <li>{property.bathrooms} Bathrooms</li>
+        <li>{bedrooms} Beds</li>
+        <li>{bathrooms} Baths</li>
+        <li>{squareFeet} Sq Ft</li>
       </ul>
 
-      #
-        View
+      <button
+        aria-label={`View details for ${address}`}
+        className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+      >
+        View Details
+      </button>
+    </article>
+  );
+}
