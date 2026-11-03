@@ -32,15 +32,74 @@ Gemini emphasized performance, search engine visibility, and scalability.
 
 ---
 
+# Practical Midterm - Persistence, Security, and Accessibility
+
+## AI Tools Used
+
+- ChatGPT
+- GitHub Copilot
+- Google AI Studio
+
+## Implementation Areas
+
+### Database and Persistence
+
+AI assistance was used to review and develop the PostgreSQL
+migration, including table relationships, primary keys,
+foreign keys, constraints, timestamps, and cascading behavior.
+
+### Security
+
+AI assistance was used to review Row Level Security policies
+for public listing access, property ownership, inquiry privacy,
+and administrative permissions.
+
+### API and Validation
+
+AI assistance was used to implement and review:
+- Property request validation using Zod.
+- Structured HTTP 400 validation errors.
+- The properties API route.
+- Server-side Supabase client configuration.
+- Parameterized database queries.
+
+### Accessibility and Responsive Design
+
+AI assistance was used to review:
+- Semantic HTML elements.
+- Accessible property card markup.
+- Keyboard navigation.
+- Visible keyboard focus indicators.
+- Responsive one-, two-, and three-column layouts.
+
+## Human Review and Decisions
+
+Generated code was reviewed and adjusted to match the
+assignment requirements. Implementation choices were
+evaluated based on functionality, security, accessibility,
+and project scope.
+
+## Verification Status
+
+- Changes committed and pushed to the exam feature branch.
+- Git working tree confirmed clean after the latest push.
+- Local production build encountered a syntax error.
+- Full browser and keyboard-navigation verification of the
+  latest implementation remains unconfirmed.
+
 ## AI Collaboration Table
 
-| Tool | Prompt | Output Used | Output Rejected | Verification | Commit |
-|--------|--------|--------|--------|--------|--------|
-| ChatGPT | Explain the purpose of Next.js, TypeScript, Tailwind CSS, ESLint, and App Router for a beginner building a neighborhood property platform. | Plain-language explanation of the stack and how the technologies work together. | Detailed examples not required for the initial app shell. | Compared with Gemini response and confirmed concepts matched official Next.js usage. | Pending |
-| Gemini | Same stack explanation prompt used with ChatGPT. | Alternative explanation using building analogies and architecture-focused descriptions. | Additional implementation details outside the scope of the lab. | Compared against ChatGPT response and identified two documented differences. | Pending |
-| Google AI Studio | Act as a senior teaching assistant. Propose a minimal Next.js App Router + TypeScript + Tailwind starter for a neighborhood property platform. Give a file plan, terminal commands, accessibility requirements, and a verification checklist. Never invent command results or credentials. | File plan, setup commands, accessibility requirements, and verification checklist. | Advanced architecture and additional features not required for the app shell milestone. | Verified that recommendations aligned with assignment requirements and contained no secrets or credentials. | Pending |
+| Tool | Prompt / Task | Output Used | Output Rejected | Verification | Commit |
+|---|---|---|---|---|---|
+| ChatGPT | Explain the purpose of Next.js, TypeScript, Tailwind CSS, ESLint, and App Router for a beginner building a neighborhood property platform. | Plain-language explanation of the technology stack. | Detailed examples not required for the initial app shell. | Compared with Gemini's response. | Earlier project commits |
+| Gemini | Same technology-stack explanation prompt used with ChatGPT. | Alternative explanation using building analogies. | Additional implementation details outside the lab scope. | Compared against ChatGPT's response. | Earlier project commits |
+| Google AI Studio | Propose a minimal Next.js App Router and TypeScript starter with a file plan, terminal commands, accessibility requirements, and verification checklist. | File plan, setup guidance, and accessibility recommendations. | Advanced architecture outside the assignment scope. | Reviewed recommendations against assignment requirements. | Earlier project commits |
+| ChatGPT / GitHub Copilot | Assist with the PostgreSQL migration, database relationships, constraints, and persistence requirements. | Database implementation guidance and migration-related code. | Any suggestions that were outside the assignment requirements or unnecessary for the project scope. | Reviewed implementation against the persistence requirements. | Midterm implementation commits |
+| ChatGPT / GitHub Copilot | Assist with Row Level Security policies and authorization requirements. | Security implementation guidance for public access, ownership, inquiry privacy, and administrative permissions. | Any suggestions that did not match the required authorization behavior. | Reviewed policies against the security requirements. | Midterm implementation commits |
+| ChatGPT / GitHub Copilot | Assist with Zod validation, structured HTTP 400 responses, and the properties API route. | Validation schema, API implementation guidance, and server-side configuration. | Unnecessary features or implementation suggestions outside the required API behavior. | Reviewed implementation against the API and validation requirements. | Midterm implementation commits |
+| ChatGPT / GitHub Copilot | Review the PropertyCard component for semantic HTML, keyboard accessibility, visible focus indicators, and responsive layout requirements. | Accessibility and responsive-design improvements. | Additional functionality not required by the assignment. | Reviewed component markup and responsive grid classes. | `cab3bb8` |
 
----
+*The latest midterm implementation commit is `cab3bb8`. Earlier project commits may contain work from multiple AI tools. Update individual commit references if you can identify the exact commits associated with each task.*
 
 ## Google AI Studio Summary
 
@@ -81,7 +140,7 @@ npm run build
 
 ---
 
-## Verification Notes
+## Earlier lab Verification Notes
 
 ### Local Testing
 
@@ -307,3 +366,36 @@ Implemented:
 - Stable property IDs used for React keys.
 
 Verified that list rendering works correctly without key warnings.
+
+## Practical Midterm - Human Review and Implementation Decisions
+
+AI-generated suggestions were reviewed before being incorporated into the project.
+
+Implementation decisions were evaluated based on:
+
+- Alignment with the assignment requirements.
+- Correctness of database relationships and constraints.
+- Appropriate access restrictions and security policies.
+- Proper request validation and error handling.
+- Semantic HTML and accessibility.
+- Responsive layout behavior.
+- Avoiding unnecessary features outside the project scope.
+
+Not every AI-generated suggestion was automatically accepted. Suggestions that introduced unnecessary complexity or did not align with the assignment requirements were excluded.
+
+## Practical Midterm - Verification Status
+
+The following development activities were completed:
+
+- Midterm implementation changes were committed to the exam feature branch.
+- Changes were pushed to the remote GitHub repository.
+- The Git working tree was confirmed clean after the latest push.
+
+The following verification limitations remain:
+
+- The local production build encountered a syntax error during testing.
+- Full browser verification of the latest implementation remains unconfirmed.
+- Full keyboard-navigation verification of the latest implementation remains unconfirmed.
+- Database runtime security testing should only be reported as successful when the corresponding tests have actually been performed.
+
+These limitations are documented to distinguish completed implementation work from tests that have not yet been verified.
