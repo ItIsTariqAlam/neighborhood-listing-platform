@@ -12,7 +12,7 @@ export default function SponsorBanner({
       className="border rounded-lg p-4 bg-yellow-50"
       aria-label="Sponsored content"
     >
-      <p className="font-bold text-sm text-gray-700">
+      <p className="font-bold text-sm text-black">
         Sponsored
       </p>
 
@@ -26,10 +26,12 @@ export default function SponsorBanner({
         </p>
       )}
 
-      {sponsor.targetUrl}
+      <a
+        href={sponsor.targetUrl}
+        className="text-blue-600 underline"
+      >
         Visit {sponsor.sponsorName}
       </a>
     </aside>
   );
 }
-``

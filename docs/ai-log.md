@@ -399,3 +399,87 @@ The following verification limitations remain:
 - Database runtime security testing should only be reported as successful when the corresponding tests have actually been performed.
 
 These limitations are documented to distinguish completed implementation work from tests that have not yet been verified.
+
+Lighthouse Accessibility Audit
+
+Tool:
+Microsoft Edge Lighthouse
+
+Results:
+Performance: 100
+Accessibility: 96
+Best Practices: 100
+SEO: 91
+
+Issue Identified:
+Background and foreground colors do not have a sufficient contrast ratio.
+
+Verification:
+Issue was observed on sponsor banner content where light-colored text was displayed on a light background.
+
+## Step 11 - ChatGPT Semantic Review
+
+### Prompt
+
+Review this React component for semantic HTML, WCAG-oriented keyboard access, responsive behavior, and TypeScript safety.
+
+Return:
+- Issue
+- Why it matters
+- Smallest change
+- Manual test
+
+Do not claim compliance from code alone.
+
+### Useful Output
+
+- Confirmed semantic use of article, header, h2, ul, and button.
+- Recommended manual keyboard testing.
+- Recommended checking color contrast.
+
+### Output Rejected
+
+- Suggestions requiring additional routes or application pages not required by the lab.
+
+### Verification
+
+Verified recommendations against Lighthouse results and manual keyboard testing.
+
+## Step 11 - Gemini Accessibility Review
+
+### Prompt
+
+Review this React component for accessibility concerns.
+
+Focus on:
+- Keyboard navigation
+- Focus visibility
+- Form labels
+- Heading hierarchy
+- Color contrast
+
+### Useful Output
+
+- Recommended improving sponsor banner text contrast.
+- Recommended validating all controls with keyboard-only navigation.
+
+### Output Rejected
+
+- Suggestions not applicable to the implemented components.
+
+### Verification
+
+Verified through Lighthouse Accessibility audit and keyboard testing.
+
+## Step 12 - Accessibility Fixes
+
+Changes Made
+
+- Increased sponsor banner text contrast.
+- Verified keyboard accessibility.
+- Maintained semantic HTML structure.
+
+Verification
+
+- Lighthouse Accessibility score: 96
+- Keyboard-only navigation tested successfully.

@@ -1,6 +1,16 @@
 import PropertyCard from "../src/components/PropertyCard";
+import SearchFilters from "../src/components/SearchFilters";
+import SponsorBanner from "../src/components/SponserBanner";
 
 export default function Home() {
+  const sponsor = {
+    id: "sponsor-001",
+    sponsorName: "Community Realty Group",
+    sponsorLogoUrl: "https://via.placeholder.com/100",
+    targetUrl: "https://example.com",
+    description: "Helping local residents buy and sell homes.",
+  };
+
   const properties = [
     {
       address: "123 Maple Street",
@@ -31,7 +41,11 @@ export default function Home() {
         Neighborhood Listing Platform
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <SearchFilters />
+
+      <SponsorBanner sponsor={sponsor} />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {properties.map((property) => (
           <PropertyCard
             key={property.address}
