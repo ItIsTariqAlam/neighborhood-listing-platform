@@ -1,0 +1,11 @@
+{
+  "property_id": "PROP-000001",
+  "address": "123 Maple Street",
+  "price": 650000,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "square_feet": 1800,
+  "amenities": ["garage", "backyard"],
+  "zip_code": "91801",
+  "local_sponsors": ["Community Realty Group"]
+}

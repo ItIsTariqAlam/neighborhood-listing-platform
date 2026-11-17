@@ -1,0 +1,93 @@
+{
+"_note": "Synthetic data generated for Lab 3. No real client or personal information included.",
+"properties": [
+{
+"property_id": "PROP-1001",
+"address": "418 Willowbrook Crescent, Meadowview",
+"price": 465000,
+"bedrooms": 3,
+"bathrooms": 2.5,
+"square_feet": 2140,
+"amenities": [
+"Hardwood Floors",
+"Attached Two-Car Garage",
+"Fenced Backyard"
+],
+"zip_code": "55401",
+"local_sponsors": [
+"Northstar Community Credit Union",
+"Hearthstone Home Warranty"
+]
+},
+{
+"property_id": "PROP-1002",
+"address": "1205 Copperfield Lane, Silverton",
+"price": 629000,
+"bedrooms": 4,
+"bathrooms": 3,
+"square_feet": 2890,
+"amenities": [
+"Quartz Kitchen Countertops",
+"Walk-In Pantry",
+"Solar Roof Panels"
+],
+"zip_code": "80202",
+"local_sponsors": [
+"Front Range Mortgage Partners"
+]
+},
+{
+"property_id": "PROP-1003",
+"address": "79 Alderwood Court, Pinehurst",
+"price": 342500,
+"bedrooms": 2,
+"bathrooms": 2,
+"square_feet": 1420,
+"amenities": [
+"Covered Patio",
+"In-Unit Laundry"
+],
+"zip_code": "97205",
+"local_sponsors": [
+"Cascade Title & Escrow",
+"Evergreen Landscaping Co."
+]
+},
+{
+"property_id": "PROP-1004",
+"address": "2310 Sunridge Terrace, Oakdale",
+"price": 785000,
+"bedrooms": 5,
+"bathrooms": 3.5,
+"square_feet": 3650,
+"amenities": [
+"Finished Basement",
+"Heated Swimming Pool",
+"Smart Thermostat System",
+"Outdoor Kitchen"
+],
+"zip_code": "27601",
+"local_sponsors": [
+"Piedmont Trust & Savings"
+]
+},
+{
+"property_id": "PROP-1005",
+"address": "564 Magnolia Street, Riverbend",
+"price": 512000,
+"bedrooms": 3,
+"bathrooms": 2,
+"square_feet": 1980,
+"amenities": [
+"Wrap-Around Porch",
+"Stainless Steel Appliances",
+"Fireplace"
+],
+"zip_code": "37203",
+"local_sponsors": [
+"Cumberland Valley Realty Advisors",
+"Beacon Home Inspections"
+]
+}
+]
+}
