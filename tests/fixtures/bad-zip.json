@@ -1,0 +1,11 @@
+{
+  "property_id": "PROP-000003",
+  "address": "789 Pine Road",
+  "price": 720000,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "square_feet": 2000,
+  "amenities": ["fireplace", "garage"],
+  "zip_code": "ABC12",
+  "local_sponsors": ["Pasadena Homes"]
+}

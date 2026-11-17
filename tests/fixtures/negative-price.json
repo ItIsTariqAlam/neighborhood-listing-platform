@@ -1,0 +1,11 @@
+{
+  "property_id": "PROP-000002",
+  "address": "456 Oak Avenue",
+  "price": -100,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "square_feet": 2400,
+  "amenities": ["pool", "garage"],
+  "zip_code": "90012",
+  "local_sponsors": ["Downtown Realty"]
+}
